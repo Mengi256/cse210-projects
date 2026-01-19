@@ -1,3 +1,6 @@
+// Extra feature: Added mood for each journal entry.
+
+
 using System;
 
 class Program
@@ -10,16 +13,24 @@ class Program
         bool running = true;
 
         while (running)
-        {
+        {   
+            Console.WriteLine();
             Console.WriteLine("------ JOURNAL MENU ----- ");
             Console.WriteLine();
-            Console.WriteLine();
+           
             Console.WriteLine("1. Write new entry");
+           
             Console.WriteLine("2. Display journal");
+         
             Console.WriteLine("3. Save journal");
+            
             Console.WriteLine("4. Load journal");
+            
             Console.WriteLine("5. Quit");
+            
             Console.Write("Choose an option: ");
+            
+            
             string choice = Console.ReadLine();
 
             switch (choice)
@@ -30,11 +41,17 @@ class Program
 
                     Console.Write("Your answer: ");
                     string answer = Console.ReadLine();
-
+                    
+                    
+                    // Extra feature: mood
+                    Console.Write("How do you feel today? ");
+                    string mood = Console.ReadLine();
+                    
                     Entry entry = new Entry();
                     entry._date = DateTime.Now.ToString("MM/dd/yyyy");
                     entry._prompt = prompt;
                     entry._answer = answer;
+                     entry._mood = mood; 
 
                     journal.AddEntry(entry);
                     break;
@@ -61,6 +78,7 @@ class Program
             }
 
             Console.WriteLine();
+            
         }
     }
 }
