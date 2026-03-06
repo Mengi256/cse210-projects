@@ -31,10 +31,10 @@ class Program
             sum += number;
         }
 
-        Console.WriteLine($"The sum is: {sum}");
+        Console.WriteLine($"The sum is:  {sum}");
 
         float average = ((float)sum) / numbers.Count;
-        Console.WriteLine($"The average is: {average}");
+        Console.WriteLine($"The average is:  {average}");
 
         
         int large = numbers[0];
@@ -47,7 +47,7 @@ class Program
             }
         }
 
-        Console.WriteLine($"The largest number is: {large}");
+        Console.WriteLine($"The largest number is:  {large}");
 
     }
 }
