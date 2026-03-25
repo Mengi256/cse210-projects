@@ -42,11 +42,11 @@ class Program
 
             if (scripture.IsCompletelyHidden())
             {
-                Console.WriteLine("All words are hidden! Great memorization practice!");
+                Console.WriteLine("All words are hidden!! Great memorization practice");
                 break;
             }
 
-            Console.Write("Press Enter to hide more words, or type 'quit' to exit: ");
+            Console.Write("Press Enter to hide more words, or type 'quit' to exit:: ");
             string input = Console.ReadLine();
 
             if (input != null && input.Trim().ToLower() == "quit")
